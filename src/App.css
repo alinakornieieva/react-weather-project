@@ -49,6 +49,10 @@ ul{
   padding: 0;
 }
 
+.description::first-letter{
+  text-transform: uppercase;
+}
+
 .day-1, 
 .day-2,
 .day-3,

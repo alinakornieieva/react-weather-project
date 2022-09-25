@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CurrentTime from "./CurrentTime";
+import Time from "./Time";
+
 
 
 
 export default function Forecast() {
-  
-    let [ready, setReady] = useState(false);
+
     let [data, setData] = useState({})
+    let [ready, setReady] = useState(false);
     function submitResult(response) {
         console.log(response)
         setReady(true)
@@ -15,8 +16,8 @@ export default function Forecast() {
             temp: Math.round(response.data.main.temp),
             description: response.data.weather[0].description,
             humidity: response.data.main.humidity,
-            wind: response.data.wind.speed,
-            time: new Date(response.data.dt * 1000)
+            date: new Date(response.data.dt * 1000),
+            wind: response.data.wind.speed
         })
     }
 
@@ -30,8 +31,8 @@ export default function Forecast() {
                 </form>
                 <h1 className="mt-3">London</h1>
                 <ul>
-                    <li><CurrentTime value="data.time"/></li>
-                    <li>{data.description}</li>
+                    <Time date={data.date}/>
+                    <li className="description">{data.description}</li>
                 </ul>
                 <div className="row">
                     <div className="col-6"><span className="temp">{data.temp}</span>
