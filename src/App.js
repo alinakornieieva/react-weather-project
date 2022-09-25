@@ -4,8 +4,7 @@ import Forecast from "./Forecast";
 function App() {
   return (
     <div >
-      
-      <Forecast />
+      <Forecast defaultCity="London" />
     </div>
   );
 }
