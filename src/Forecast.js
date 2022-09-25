@@ -10,6 +10,7 @@ export default function Forecast(props) {
         console.log(response)
         setData({
             ready: true,
+            icon: response.data.weather[0].icon,
             city: response.data.name,
             temp: Math.round(response.data.main.temp),
             description: response.data.weather[0].description,
@@ -38,7 +39,7 @@ export default function Forecast(props) {
             <div>
                 <form onSubmit={handleSubmit}>
                     <input type="search" className="m-2 search" onChange={changeCity} placeholder="Enter a city..."></input>
-                    <input type="submit" value="Submit" className="btn btn-info mb-1"></input> 
+                    <input type="submit" value="Submit" className="btn mb-1"></input> 
                 </form>
                 <WeatherInfo info={data}/>
             </div>

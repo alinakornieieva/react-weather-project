@@ -11,6 +11,18 @@
   border-radius: 10px;
 } 
 
+
+.btn{
+  background-color: #004445;
+  color: white;
+  
+}
+
+.btn:hover{
+  background-color: white;
+  color: #004445;
+} 
+
 .search{
   padding: 5px;
   border-radius: 4px;
@@ -34,6 +46,8 @@ ul{
 
 .temp{
   font-size: 40px;
+  font-weight: 600;
+
 }
 
 .celsius, .fahrenheit{

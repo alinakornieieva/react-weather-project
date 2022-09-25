@@ -1,5 +1,6 @@
 import React from "react";
 import Time from "./Time";
+import  WeatherIcon from "./WeatherIcon"
 
 
 export default function WeatherInfo(props) {
@@ -11,10 +12,14 @@ export default function WeatherInfo(props) {
                     <li className="description">{props.info.description}</li>
                 </ul>
                 <div className="row">
-                    <div className="col-6"><span className="temp">{props.info.temp}</span>
-                    <span className="degrees">
-                    <span><a href="/" className="celsius">°C</a></span>|<span><a href="/" className="fahrenheit">°F</a></span>
-                    </span>
+                    <div className="col-6">
+                        <span>
+                            <WeatherIcon code={props.info.icon} />
+                            <span className="temp">{props.info.temp}</span>
+                        </span>
+                        <span className="degrees">
+                        <span><a href="/" className="celsius">°C</a></span>|<span><a href="/" className="fahrenheit">°F</a></span>
+                        </span>
                     </div>
                     <div className="col-6">
                         <ul>
