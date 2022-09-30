@@ -1,6 +1,7 @@
 import React from "react";
 import Time from "./Time";
 import  WeatherIcon from "./WeatherIcon"
+import Degrees from "./Degrees";
 
 
 export default function WeatherInfo(props) {
@@ -8,18 +9,18 @@ export default function WeatherInfo(props) {
         <div>
             <h1 className="mt-3">{props.info.city}</h1>
                 <ul>
+                    <li>
                     <Time date={props.info.date}/>
+                    </li>
                     <li className="description">{props.info.description}</li>
                 </ul>
                 <div className="row">
                     <div className="col-6">
                         <span>
                             <WeatherIcon code={props.info.icon} />
-                            <span className="temp">{props.info.temp}</span>
+                            <Degrees value={props.info.temp} />
                         </span>
-                        <span className="degrees">
-                        <span><a href="/" className="celsius">°C</a></span>|<span><a href="/" className="fahrenheit">°F</a></span>
-                        </span>
+                        
                     </div>
                     <div className="col-6">
                         <ul>

@@ -1,4 +1,4 @@
- body{
+ .main{
   display: block;
   margin: 0 auto;
   margin-top: 20px;
@@ -31,12 +31,13 @@
 
 
 h1{
-  font-size: 34px;
+  font-size: 38px;
 }
 
 
 li{
   list-style-type: none;
+  font-size: 18px;
 }
 
 ul{
@@ -45,13 +46,18 @@ ul{
 }
 
 .temp{
-  font-size: 40px;
+  font-size: 44px;
   font-weight: 600;
 
 }
 
-.celsius, .fahrenheit{
+p{
+  text-align: center;
+}
+
+a{
   text-decoration: none;
+  color: #004445;
 }
 
 .celsius{
