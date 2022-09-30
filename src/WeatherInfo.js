@@ -1,7 +1,7 @@
 import React from "react";
 import Time from "./Time";
-import  WeatherIcon from "./WeatherIcon"
 import Degrees from "./Degrees";
+import WeatherIcon from "./WeatherIcon";
 
 
 export default function WeatherInfo(props) {
@@ -15,14 +15,17 @@ export default function WeatherInfo(props) {
                     <li className="description">{props.info.description}</li>
                 </ul>
                 <div className="row">
-                    <div className="col-6">
-                        <span>
-                            <WeatherIcon code={props.info.icon} />
+                    <div className="col-6 d-flex icon-degree">
+                        <div  >
+                            <WeatherIcon code={props.info.icon} /> 
+                        </div>
+                         <div>
                             <Degrees value={props.info.temp} />
-                        </span>
-                        
+                        </div> 
+
+                            
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 adition">
                         <ul>
                             <li>Humidity: <span>{props.info.humidity}</span>%</li>
                             <li>Wind: <span>{props.info.wind}</span>km/h</li>

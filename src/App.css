@@ -3,10 +3,10 @@
   margin: 0 auto;
   margin-top: 20px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 7px;
   padding-left: 30px;
   padding-right: 30px;
-  width: fit-content;
+  width: fit-content; 
   border: 1px solid black;
   border-radius: 10px;
 } 
@@ -31,13 +31,16 @@
 
 
 h1{
-  font-size: 38px;
+  font-size: 42px;
 }
-
 
 li{
   list-style-type: none;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.adition{
+   padding: 20px;
 }
 
 ul{
@@ -45,9 +48,18 @@ ul{
  
 }
 
+.conversion{
+  white-space: nowrap;
+}
+
+canvas{
+  margin: 10px auto;
+}
+
 .temp{
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 600;
+  margin: 5px;
 
 }
 
@@ -60,10 +72,7 @@ a{
   color: #004445;
 }
 
-.celsius{
-  margin-left: 2px;
-  margin-right: 2px;
-}
+
 
 
 
@@ -77,6 +86,8 @@ a{
 .description::first-letter{
   text-transform: uppercase;
 }
+
+
 
 .day-1, 
 .day-2,
